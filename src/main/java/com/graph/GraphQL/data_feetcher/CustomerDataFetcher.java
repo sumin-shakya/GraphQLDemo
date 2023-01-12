@@ -30,6 +30,8 @@ public class CustomerDataFetcher {
     public List<Customer> customers() {
         return customerRepository.findAll();
     }
+
+    //new cxommit
     @DgsData(parentType = "Customer", field = "accounts")
     public List<Account> accounts(DgsDataFetchingEnvironment dgsDataFetchingEnvironment) {
         Customer customer = dgsDataFetchingEnvironment.getSource();
