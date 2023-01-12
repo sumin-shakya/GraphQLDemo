@@ -30,7 +30,9 @@ public class CustomerDataFetcher {
     public List<Customer> customers() {
         return customerRepository.findAll();
     }
-   /* @DgsData(parentType = "Customer", field = "accounts")
+
+    //new asas
+    @DgsData(parentType = "Customer", field = "accounts")
     public List<Account> accounts(DgsDataFetchingEnvironment dgsDataFetchingEnvironment) {
         Customer customer = dgsDataFetchingEnvironment.getSource();
         List<Account> accountList = new ArrayList<>();
@@ -39,7 +41,7 @@ public class CustomerDataFetcher {
             accountList.add(accountResponse);
         }
         return accountList;
-    }*/
+    }
 
    @DgsMutation
     public Customer customer(CustomerInput customerInput) {
